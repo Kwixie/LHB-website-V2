@@ -1,0 +1,70 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+
+    var homePage = Umbraco.AssignedContentItem.AncestorOrSelf<StartPage>();
+
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>LHB - förbundet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/rte.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand" href="/"><img src="/images/inverterad_logo.png" width=60 /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            @if (homePage?.Children != null && homePage.Children.Any())
+            {
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        @foreach (var child in homePage.Children)
+                        {
+                            <li class="nav-item nav-item-style">
+                                <a class="nav-link" href="@child.Url()">@child.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+            <div class="nav-layout">
+
+            </div>
+        </div>
+    </nav>
+    <main>
+    @RenderBody()
+    </main>
+    <!-- Footer -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row section">
+                <div class="text-center">
+                    <img src="~/images/home_logo.png" class="img-fluid" alt="Arm with Umbraco Logo">
+@*                     <p class="pt-4">Kontakt: @homePage.TextContactMail</p> *@
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
