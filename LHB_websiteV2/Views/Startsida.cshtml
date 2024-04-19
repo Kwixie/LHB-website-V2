@@ -1,0 +1,124 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.StartPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+
+
+    var storiesPage = Model.DescendantOfType("whoWeArePage");
+    // var contentStoriesPage = (ContentModels.WhoWeArePage)storiesPage;
+
+    // var storiesPage = Model.Children.FirstOrDefault(child => child.HasValue("aboutPage"));
+    // var storiesContent = storiesPage.GetProperty("blocklistStory").Value();
+
+}
+
+<!-- Hero -->
+<img src=@Model.ImageHero.GetCropUrl("hero") class="img-fluid hero-style" />
+
+<!-- Jumbotron, w title -->
+<div class="jumbotron text-center jumbotron-fluid">
+    <div class="container py-4">
+        <h1 class="display-3">@Model.TextHeading</h1>
+        <p>
+            @Model.RteBody
+        </p>
+    </div>
+</div>
+
+
+<!-- Aktuellt -->
+
+@* <div class="container">
+    <div class="row section">
+        <div class="col-md-12">
+            <h1>@Model.TextHeadingCards</h1>
+        </div>
+
+        @{
+            var cards = Model.Value<IEnumerable<BlockListItem>>("blocklistCards");
+        }
+
+        @foreach (var card in cards)
+        {
+            var content = (ContentModels.CompNewsCard)card.Content;
+
+
+
+            <div class="col-md-4">
+                <div class="box-blog">
+                    <a href="@content.LinkCard">
+                        <div class="blog-promoImage"
+                             style="
+                  background-image: url('@content.Image.Url()');
+                                    "></div>
+                    </a>
+                    <h5>@content.TextHeading</h5>
+                    <p class="blog-meta">@content.StringDate</p>
+                    <p>
+                        @content.TextString
+                    </p>
+                </div>
+                <a href="Blogpost.html" class="btn btn-inverted">Läs mer</a>
+            </div>
+
+        }
+    </div>
+</div> *@
+
+
+<!-- About section -->
+
+@* <div class="container-fluid grey-bg">
+    <div class="container">
+        <div class="row section">
+            <div class="col-md-8">
+                <h2>@Model.TextTitleAbout</h2>
+                <div class="rte">@Model.RteBodyAbout</div>
+                <a href="@Model.LinkBtnAbout.Url" class="btn btn-inverted mb-4" role="button">@Model.LinkBtnAbout.Name >></a>
+            </div>
+            <div class="col-md-4">
+                <img src=@Model.ImageAbout.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" />
+            </div>
+        </div>
+    </div>
+</div> *@
+
+
+<!-- Member stories -->
+@* <div class="container-fluid">
+    <div class="container">
+        <div class="row section">
+
+            <h1 class="text-center mb-5">@Model.TextTitleStories</h1>
+
+            @{
+                var stories = contentStoriesPage.Value<IEnumerable<BlockListItem>>("blocklistStory").Take(4);
+            }
+
+            @foreach (var story in stories)
+            {
+                var contentStory = (ContentModels.CompStory)story.Content;
+                <div class="col-md-3">
+                    <img src=@contentStory.Image.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block mb-4" />
+                    <h3>@contentStory.TextPresentation</h3>
+                    <p>@contentStory.TextTeaser</p>
+                </div>
+            }
+        </div>
+    </div>
+</div> *@
+
+<!-- Call to Action -->
+@* <div class="container-fluid pink-bg cta">
+    <div class="container">
+        <div class="row section">
+            <div class="col-md-12 text-center">
+                <h1 class="mb-4">@Model.TextMember</h1>
+                <a href="@Model.LinkBtnMember.Url" class="btn btn-secondary" role="button">@Model.LinkBtnMember.Name >></a>
+            </div>
+        </div>
+    </div>
+</div> *@
