@@ -8,10 +8,8 @@
 
 
     var storiesPage = Model.DescendantOfType("whoWeArePage");
-    // var contentStoriesPage = (ContentModels.WhoWeArePage)storiesPage;
+    var contentStoriesPage = (ContentModels.WhoWeArePage)storiesPage;
 
-    // var storiesPage = Model.Children.FirstOrDefault(child => child.HasValue("aboutPage"));
-    // var storiesContent = storiesPage.GetProperty("blocklistStory").Value();
 
 }
 
@@ -21,17 +19,17 @@
 <!-- Jumbotron, w title -->
 <div class="jumbotron text-center jumbotron-fluid">
     <div class="container py-4">
-        <h1 class="display-3">@Model.TextHeading</h1>
-        <p>
+        <h1 class="display-4">@Model.TextHeading</h1>
+        <h5>
             @Model.RteBody
-        </p>
+        </h5>
     </div>
 </div>
 
 
 <!-- Aktuellt -->
 
-@* <div class="container">
+<div class="container">
     <div class="row section">
         <div class="col-md-12">
             <h1>@Model.TextHeadingCards</h1>
@@ -44,12 +42,12 @@
         @foreach (var card in cards)
         {
             var content = (ContentModels.CompNewsCard)card.Content;
-
+            var link = content.LinkCard as Link;
 
 
             <div class="col-md-4">
                 <div class="box-blog">
-                    <a href="@content.LinkCard">
+                    <a href="@link.Url">
                         <div class="blog-promoImage"
                              style="
                   background-image: url('@content.Image.Url()');
@@ -61,34 +59,34 @@
                         @content.TextString
                     </p>
                 </div>
-                <a href="Blogpost.html" class="btn btn-inverted">Läs mer</a>
+                <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
             </div>
 
         }
     </div>
-</div> *@
+</div>
 
 
 <!-- About section -->
 
-@* <div class="container-fluid grey-bg">
+<div class="container-fluid light-blue-bg">
     <div class="container">
         <div class="row section">
             <div class="col-md-8">
                 <h2>@Model.TextTitleAbout</h2>
                 <div class="rte">@Model.RteBodyAbout</div>
-                <a href="@Model.LinkBtnAbout.Url" class="btn btn-inverted mb-4" role="button">@Model.LinkBtnAbout.Name >></a>
+                <a href="@Model.LinkBtnAbout.Url" class="btn btn-primary mb-4" role="button">@Model.LinkBtnAbout.Name >></a>
             </div>
             <div class="col-md-4">
                 <img src=@Model.ImageAbout.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" />
             </div>
         </div>
     </div>
-</div> *@
+</div>
 
 
 <!-- Member stories -->
-@* <div class="container-fluid">
+<div class="container-fluid">
     <div class="container">
         <div class="row section">
 
@@ -104,21 +102,22 @@
                 <div class="col-md-3">
                     <img src=@contentStory.Image.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block mb-4" />
                     <h3>@contentStory.TextPresentation</h3>
-                    <p>@contentStory.TextTeaser</p>
+                    <p>@contentStory.TextTeaser <a href="@contentStoriesPage.Url()"><span class="read-more">  Läs mer</span></a></p>
                 </div>
             }
         </div>
     </div>
-</div> *@
+</div>
 
 <!-- Call to Action -->
-@* <div class="container-fluid pink-bg cta">
+<div class="container-fluid pink-bg cta">
     <div class="container">
         <div class="row section">
             <div class="col-md-12 text-center">
                 <h1 class="mb-4">@Model.TextMember</h1>
-                <a href="@Model.LinkBtnMember.Url" class="btn btn-secondary" role="button">@Model.LinkBtnMember.Name >></a>
+                <a href="@Model.LinkBtnMember.Url" class="btn btn-secondary" role="button">@Model.LinkBtnMember.Name</a>
+                
             </div>
         </div>
     </div>
-</div> *@
+</div>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LHB_websiteV2", "LHB_websiteV2\LHB_websiteV2.csproj", "{AFB1503D-DB63-414F-8774-E036FBDA5992}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LHB_Frontend", "Frontend\LHB_Frontend.shproj", "{6E69DBB1-0DAB-4610-A06A-8AE414FA0ED0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFB1503D-DB63-414F-8774-E036FBDA5992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB1503D-DB63-414F-8774-E036FBDA5992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB1503D-DB63-414F-8774-E036FBDA5992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB1503D-DB63-414F-8774-E036FBDA5992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC91A262-FE8C-4C52-8704-1364DDFE9845}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Frontend\Frontend.projitems*{6e69dbb1-0dab-4610-a06a-8ae414fa0ed0}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
