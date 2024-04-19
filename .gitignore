@@ -479,3 +479,4 @@ appsettings-schema.*.json
 /wwwroot/media/
 LHB_websiteV2/wwwroot/images/
 LHB_websiteV2/wwwroot/media/
+LHB_websiteV2/umbraco/Data/TEMP/

@@ -1,20 +1,21 @@
 :root {
     --bs-navbar-color: purple;
-    --pink: #7d2b8c;
+    --pink: #43135f;
     --dark-purple: #221726;
     --purple: #553198;
     --violet: #503C73;
     --blue: #1E1B37;
-
 }
 
+/*old pink //#7d2b8c*/
+
 main {
-    min-height: calc(100vh - 391px);
+    min-height: calc(100vh - 365px);
     background-color: #fff;
-} 
+}
 
 .pink-bg {
-    background-color: var(--pink);
+    background-color: #43135f;
     color: white;
 }
 
@@ -25,6 +26,17 @@ main {
     margin-right: 30px;
     margin-top: 0px;
     /*border: 10px solid var(--pink);*/
+}
+
+
+@media (max-width: 767px) {
+    .nav-item-style:not(:last-child) {
+        border-bottom: solid 1px #876087;
+    }
+}
+
+.whoweare-page > * .rte {
+    margin-top: 0 !important;
 }
 
 @media (max-width: 500px) {
@@ -49,6 +61,8 @@ main {
     color: #876087;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 #navbarNav {
@@ -65,7 +79,7 @@ main {
 /* ---------- FONTS ---------- */
 
 * {
-  font-family: "Lato", Roboto, sans-serif;
+    font-family: "Montserrat", Roboto, sans-serif;
 }
 
 h2 {
@@ -74,6 +88,15 @@ h2 {
 
 p {
   margin: 0 0 20px;
+}
+
+.read-more {
+    color: var(--purple);
+    font-weight: bold;
+}
+.read-more:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -92,16 +115,16 @@ p {
 }
 
 .btn-secondary {
-    background-color: #1e1b378c;
+    background-color: #806098b8;
     padding: 0.7rem 1.5rem;
     border-radius: 3px;
-    border: 2px #1e1b378c solid;
+    border: 2px #806098b8 solid;
 }
 
     .btn-secondary:hover,
     .btn-secondary:focus {
-        background-color: #1e1b3766;
-        border: 2px #1e1b3766 solid;
+        background-color: #806098;
+        border: 2px #806098 solid;
     }
 
 
@@ -151,6 +174,24 @@ p {
   color: white;
   padding-top: 35px;
   padding-bottom: 35px;
+}
+
+    .jumbotron div {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .jumbotron h5 {
+        font-style: italic;
+        margin-top: 15px;
+    }
+
+@media (max-width: 480px) {
+    jumbotron h5 {
+        font-size: 16px;
+        margin-top: 30px;
+    }
 }
 
 /* ---------- CTA ---------- */
@@ -216,6 +257,10 @@ p a {
   background-color: #f9f7f4;
 }
 
+.light-blue-bg {
+    background-color: #cec3e566;
+}
+
 .orange-bg {
   background-color: rgba(247, 156, 55, 0.8);
   color: white;
@@ -277,7 +322,7 @@ p a {
 
 .article-page {
     background-color: #f7eeff;
-    min-height: calc(100vh - 391px);
+    min-height: calc(100vh - 365px);
 }
 
 .article-page .wrapper {
@@ -424,9 +469,9 @@ div.teammember {
 
 
 
-.footer img {
-    width: 235px;
-    padding-top: 40px;
+.footer .logo {
+    width: 130px;
+    padding-top: 30px;
 }
 
 /* ---------- STYLE FOR GRID EDITOR ---------- */

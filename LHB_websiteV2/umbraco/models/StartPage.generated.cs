@@ -50,12 +50,51 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Kort
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("blocklistCards")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel BlocklistCards => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "blocklistCards");
+
+		///<summary>
+		/// Visa sektion: Hämtar de fyra senaste berättelserna från "Vilka är vi"
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[ImplementPropertyType("boolShowSection")]
+		public virtual bool BoolShowSection => this.Value<bool>(_publishedValueFallback, "boolShowSection");
+
+		///<summary>
+		/// Bild
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("imageAbout")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageAbout => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageAbout");
+
+		///<summary>
 		/// Hero bild
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("imageHero")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageHero");
+
+		///<summary>
+		/// Knapplänk
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("linkBtnAbout")]
+		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtnAbout => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtnAbout");
+
+		///<summary>
+		/// Knapplänk
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("linkBtnMember")]
+		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtnMember => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtnMember");
 
 		///<summary>
 		/// Text
@@ -66,11 +105,59 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RteBody => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "rteBody");
 
 		///<summary>
+		/// Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("rteBodyAbout")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RteBodyAbout => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "rteBodyAbout");
+
+		///<summary>
+		/// Kontaktmejl
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textContactMail")]
+		public virtual string TextContactMail => this.Value<string>(_publishedValueFallback, "textContactMail");
+
+		///<summary>
 		/// Rubrik
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("textHeading")]
 		public virtual string TextHeading => this.Value<string>(_publishedValueFallback, "textHeading");
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textHeadingCards")]
+		public virtual string TextHeadingCards => this.Value<string>(_publishedValueFallback, "textHeadingCards");
+
+		///<summary>
+		/// Text bli medlem
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textMember")]
+		public virtual string TextMember => this.Value<string>(_publishedValueFallback, "textMember");
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textTitleAbout")]
+		public virtual string TextTitleAbout => this.Value<string>(_publishedValueFallback, "textTitleAbout");
+
+		///<summary>
+		/// Titel
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textTitleStories")]
+		public virtual string TextTitleStories => this.Value<string>(_publishedValueFallback, "textTitleStories");
 	}
 }
