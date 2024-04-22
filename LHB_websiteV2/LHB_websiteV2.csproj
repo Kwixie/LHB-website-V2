@@ -4,6 +4,29 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="wwwroot\media\3kflpcbb\hero2_lhb.png" />
+    <Content Include="wwwroot\media\aneoea0n\avatar3.png" />
+    <Content Include="wwwroot\media\ax3cx4yg\definition.png" />
+    <Content Include="wwwroot\media\enzbzhej\img_0062.png" />
+    <Content Include="wwwroot\media\he3pbtll\screenshot-2024-02-22-223210.png" />
+    <Content Include="wwwroot\media\icun205z\screenshot-2024-02-22-223641.png" />
+    <Content Include="wwwroot\media\is2nilzn\vadaerkoen.png" />
+    <Content Include="wwwroot\media\kkjnthuv\mucf.png" />
+    <Content Include="wwwroot\media\ldnnwji3\sara-rampazzo-gypw0jmai1i-unsplash.jpg" />
+    <Content Include="wwwroot\media\q2gjioan\hero2_lhb.png" />
+    <Content Include="wwwroot\media\r0dacgpd\screenshot-2024-03-02-141428.png" />
+    <Content Include="wwwroot\media\t53pmdpa\img_0066.png" />
+    <Content Include="wwwroot\media\uwsfuelo\avatar2.png" />
+    <Content Include="wwwroot\media\vpgpeqta\avatar1.png" />
+    <Content Include="wwwroot\media\wwfhypoq\hero2_lhb.png" />
+    <Content Include="wwwroot\media\wwrlmd2d\avatar4.png" />
+    <Content Include="wwwroot\media\z3klg53w\skolverket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\media\cxqdmv2j\skolverket.pdf" />
+    <None Include="wwwroot\media\sxndpkcp\mucf.pdf" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="13.2.2" />
