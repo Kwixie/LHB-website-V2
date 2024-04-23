@@ -5,6 +5,8 @@ builder.CreateUmbracoBuilder()
     .AddWebsite()
     .AddDeliveryApi()
     .AddComposers()
+    .AddAzureBlobMediaFileSystem() // This configures the required services for Media
+    .AddAzureBlobImageSharpCache()
     .Build();
 
 WebApplication app = builder.Build();
