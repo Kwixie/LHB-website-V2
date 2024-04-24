@@ -1,0 +1,17 @@
+/* .rte img {
+    max-width: 100%;
+}
+
+.rte.last-p-mb {
+    margin-bottom: 40px;
+}
+
+.rte p:last-child {
+    margin-bottom: 0px;
+} */
+.arrow-right::after {
+  content: url(/images/right-arrow.svg);
+  display: inline-block;
+  margin-left: 8px;
+  transform: translateY(10px);
+}

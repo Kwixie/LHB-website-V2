@@ -28,6 +28,28 @@ main {
     /*border: 10px solid var(--pink);*/
 }
 
+.arrow-right::after {
+    content: url(/images/right-arrow.svg);
+    display: inline-block;
+    margin-left: 8px;
+    transform: translateY(10px);
+}
+
+.article-link {
+    font-weight: 600;
+    color: #890fb0;
+    font-size: 20px;
+}
+.article-link:hover {
+    opacity: 60%;
+}
+
+.color-pink {
+    color: #7b2695;
+}
+
+
+
 
 @media (max-width: 767px) {
     .nav-item-style:not(:last-child) {
