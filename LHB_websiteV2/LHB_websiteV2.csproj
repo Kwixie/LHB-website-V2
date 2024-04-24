@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+=======
+<Project Sdk="Microsoft.NET.Sdk.Web">
+>>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+<<<<<<< HEAD
     <UserSecretsId>e4020998-f933-4835-8899-cac037e9d466</UserSecretsId>
   </PropertyGroup>
 
@@ -11,6 +16,35 @@
     <PackageReference Include="Umbraco.Cms" Version="13.2.2" />
     <PackageReference Include="Umbraco.StorageProviders.AzureBlob" Version="13.0.1" />
     <PackageReference Include="Umbraco.StorageProviders.AzureBlob.ImageSharp" Version="13.0.1" />
+=======
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="wwwroot\media\3kflpcbb\hero2_lhb.png" />
+    <Content Include="wwwroot\media\aneoea0n\avatar3.png" />
+    <Content Include="wwwroot\media\ax3cx4yg\definition.png" />
+    <Content Include="wwwroot\media\enzbzhej\img_0062.png" />
+    <Content Include="wwwroot\media\he3pbtll\screenshot-2024-02-22-223210.png" />
+    <Content Include="wwwroot\media\icun205z\screenshot-2024-02-22-223641.png" />
+    <Content Include="wwwroot\media\is2nilzn\vadaerkoen.png" />
+    <Content Include="wwwroot\media\kkjnthuv\mucf.png" />
+    <Content Include="wwwroot\media\ldnnwji3\sara-rampazzo-gypw0jmai1i-unsplash.jpg" />
+    <Content Include="wwwroot\media\q2gjioan\hero2_lhb.png" />
+    <Content Include="wwwroot\media\r0dacgpd\screenshot-2024-03-02-141428.png" />
+    <Content Include="wwwroot\media\t53pmdpa\img_0066.png" />
+    <Content Include="wwwroot\media\uwsfuelo\avatar2.png" />
+    <Content Include="wwwroot\media\vpgpeqta\avatar1.png" />
+    <Content Include="wwwroot\media\wwfhypoq\hero2_lhb.png" />
+    <Content Include="wwwroot\media\wwrlmd2d\avatar4.png" />
+    <Content Include="wwwroot\media\z3klg53w\skolverket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\media\cxqdmv2j\skolverket.pdf" />
+    <None Include="wwwroot\media\sxndpkcp\mucf.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="13.2.2" />
+>>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
   </ItemGroup>
 
   <ItemGroup>

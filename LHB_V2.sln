@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LHB_websiteV2", "LHB_websiteV2\LHB_websiteV2.csproj", "{AFB1503D-DB63-414F-8774-E036FBDA5992}"
 EndProject
+<<<<<<< HEAD
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LHBV2_Frontend", "LHBV2_Frontend\LHBV2_Frontend.shproj", "{48219655-0920-4199-8C86-CE399F97A09A}"
+=======
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LHB_Frontend", "Frontend\LHB_Frontend.shproj", "{6E69DBB1-0DAB-4610-A06A-8AE414FA0ED0}"
+>>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		SolutionGuid = {BC91A262-FE8C-4C52-8704-1364DDFE9845}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+<<<<<<< HEAD
 		LHBV2_Frontend\LHBV2_Frontend.projitems*{48219655-0920-4199-8c86-ce399f97a09a}*SharedItemsImports = 13
+=======
+		Frontend\Frontend.projitems*{6e69dbb1-0dab-4610-a06a-8ae414fa0ed0}*SharedItemsImports = 13
+>>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
 	EndGlobalSection
 EndGlobal
