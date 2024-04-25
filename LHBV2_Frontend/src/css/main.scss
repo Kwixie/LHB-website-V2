@@ -61,26 +61,6 @@ main {
   border-radius: 10px 10px 10px 0;
 }
 
-.nav-item-style {
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 800;
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.navbar-nav .nav-link {
-  color: #876087;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-#navbarNav {
-  justify-content: center;
-}
-
 .hero-style {
   height: calc(100vh - 60px);
   width: 100%;
@@ -212,6 +192,38 @@ p {
 }
 
 /* ---------- NAVBAR ---------- */
+.nav-item-style {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #876087;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.navbar-nav {
+  justify-content: space-between;
+  width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .navbar-nav {
+    width: 95%;
+  }
+}
+
+#navbarNav {
+  justify-content: center;
+  width: 100%;
+}
+
 nav .nav-layout {
   width: 90px;
 }
