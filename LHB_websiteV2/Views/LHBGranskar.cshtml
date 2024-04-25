@@ -2,33 +2,21 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.InvestigatePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-<<<<<<< HEAD
     Layout = "Master.cshtml";
-=======
-	Layout = "Master.cshtml";
->>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
 }
 
 <div class="container-fluid article-page pt-md-5 investigate-page">
     <div class="container wrapper">
         <div class="row section">
             <div class="col-md-12">
-<<<<<<< HEAD
                 <h1 style="margin-bottom: 24px">@Model.TextHeading</h1>
             </div>
             <div class="col-md-12">
                 @foreach (var investigation in Model.BlockListInvestigations)
-=======
-                <h1>@Model.TextHeading</h1>
-            </div>
-            <div class="col-md-12">
-                @foreach(var investigation in Model.BlockListInvestigations)
->>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
                 {
                     var item = (ContentModels.CompGranskning)investigation.Content;
 
                     <h3>@item.Title</h3>
-<<<<<<< HEAD
                     <div class="rte last-p-mb">
                         @item.RteBody
                         @if (item.LinkSingle != null)
@@ -40,19 +28,6 @@
                             </a>
                         }
                     </div>
-=======
-                    <div class="rte">
-                        @item.RteBody
-                    </div>
-                    if (item.LinkSingle != null)
-                    {
-                        <a href="@item.LinkSingle.Url
-                                " class="btn btn-inverted" role="button">
-                       
-                        @item.LinkSingle.Name
-                    </a>
-                    }
->>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
                 }
 
             </div>

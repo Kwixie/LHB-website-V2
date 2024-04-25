@@ -28,7 +28,6 @@ main {
     /*border: 10px solid var(--pink);*/
 }
 
-<<<<<<< HEAD
 .arrow-right::after {
     content: url(/images/right-arrow.svg);
     display: inline-block;
@@ -48,11 +47,6 @@ main {
 .color-pink {
     color: #7b2695;
 }
-
-
-
-=======
->>>>>>> 532cc16fbe7193efbb9c0630dd56db0ac44b5afa
 
 @media (max-width: 767px) {
     .nav-item-style:not(:last-child) {
