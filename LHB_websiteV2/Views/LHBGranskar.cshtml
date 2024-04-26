@@ -15,19 +15,21 @@
                 @foreach (var investigation in Model.BlockListInvestigations)
                 {
                     var item = (ContentModels.CompGranskning)investigation.Content;
-
-                    <h3>@item.Title</h3>
-                    <div class="rte last-p-mb">
-                        @item.RteBody
+                    <div class="investigation-wrapper">
+                        <h3>@item.Title</h3>
+                        <div class="rte">
+                            @item.RteBody
+                        </div>
                         @if (item.LinkSingle != null)
                         {
                             <a href="@item.LinkSingle.Url
-                                        " class="arrow-right article-link" role="button">
+                                                                " class="arrow-right article-link" role="button">
 
                                 @item.LinkSingle.Name
                             </a>
                         }
                     </div>
+
                 }
 
             </div>

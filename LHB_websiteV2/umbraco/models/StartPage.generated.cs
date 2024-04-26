@@ -50,6 +50,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Bakgrundsfärg
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("bgColor")]
+		public virtual string BgColor => this.Value<string>(_publishedValueFallback, "bgColor");
+
+		///<summary>
+		/// Bakgrundsfärg
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("bgColorFooter")]
+		public virtual string BgColorFooter => this.Value<string>(_publishedValueFallback, "bgColorFooter");
+
+		///<summary>
 		/// Kort
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
@@ -97,6 +113,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtnMember => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtnMember");
 
 		///<summary>
+		/// Logo: Ladda upp logo i .png (bakgrund ska vara transparent)
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("logoImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LogoImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "logoImage");
+
+		///<summary>
 		/// Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
@@ -111,6 +135,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("rteBodyAbout")]
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RteBodyAbout => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "rteBodyAbout");
+
+		///<summary>
+		/// Textfärg
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[ImplementPropertyType("textColorFooter")]
+		public virtual bool TextColorFooter => this.Value<bool>(_publishedValueFallback, "textColorFooter");
 
 		///<summary>
 		/// Kontaktmejl
@@ -159,5 +190,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("textTitleStories")]
 		public virtual string TextTitleStories => this.Value<string>(_publishedValueFallback, "textTitleStories");
+
+		///<summary>
+		/// Färg på text navigering, knappar och små detaljer: Skriv in hex-kod för färgen, t.ex. #43135f
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("themeColor")]
+		public virtual string ThemeColor => this.Value<string>(_publishedValueFallback, "themeColor");
 	}
 }
