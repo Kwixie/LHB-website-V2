@@ -11,10 +11,17 @@
     var contentStoriesPage = (ContentModels.WhoWeArePage)storiesPage;
 }
 
-@if (Model.ImageHero != null)
+@if (Model.ImageLogo != null)
 {
     <div class="hero-wrapper">
         <img src=@Model.ImageLogo.GetCropUrl("logo") class="img-logo" />
+    </div>
+
+}
+
+@if (Model.ImageHero != null)
+{
+    <div class="hero-wrapper">
         <img src=@Model.ImageHero.GetCropUrl("hero") class="img-fluid hero-style" />
        
     </div>
@@ -33,87 +40,3 @@
     </div>
 }
 
-@* <!-- Hero -->
-<!-- Jumbotron, w title -->
-<div class="jumbotron text-center jumbotron-fluid">
-    <div class="container py-4">
-        <h1 class="display-4 bg-blue">@Model.TextHeading</h1>
-        <h5>
-            @Model.RteBody
-        </h5>
-    </div>
-</div>
-
-
-<!-- Aktuellt -->
-
-<div class="container">
-    <div class="row section">
-        <div class="col-md-12">
-            <h1>@Model.TextHeadingCards</h1>
-        </div>
-
-        @{
-            var cards = Model.Value<IEnumerable<BlockListItem>>("blocklistCards");
-        }
-
-        @foreach (var card in cards)
-        {
-            var content = (ContentModels.CompNewsCard)card.Content;
-            var link = content.LinkCard as Link;
-
-
-            <div class="col-md-4">
-                <div class="box-blog">
-                    <a href="@link.Url">
-                        <div class="blog-promoImage"
-                             style="
-                  background-image: url('@content.Image.Url()');
-                                        "></div>
-                    </a>
-                    <h5>@content.TextHeading</h5>
-                    <p class="blog-meta">@content.StringDate</p>
-                    <p>
-                        @content.TextString
-                    </p>
-                </div>
-                <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
-            </div>
-
-        }
-    </div>
-</div>
-
-
-<!-- About section -->
-
-<div class="container-fluid light-blue-bg">
-    <div class="container">
-        <div class="row section">
-            <div class="col-md-8">
-                <h2>@Model.TextTitleAbout</h2>
-                <div class="rte">@Model.RteBodyAbout</div>
-                <a href="@Model.LinkBtnAbout.Url" class="btn btn-primary mb-4" role="button">@Model.LinkBtnAbout.Name</a>
-            </div>
-            <div class="col-md-4">
-                <img src=@Model.ImageAbout.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" />
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Member stories -->
-
-
-<!-- Call to Action -->
-<div class="container-fluid pink-bg cta">
-    <div class="container">
-        <div class="row section">
-            <div class="col-md-12 text-center">
-                <h1 class="mb-4">@Model.TextMember</h1>
-                <a href="@Model.LinkBtnMember.Url" class="btn btn-secondary" role="button" target=@Model.LinkBtnMember.Target>@Model.LinkBtnMember.Name</a>
-            </div>
-        </div>
-    </div>
-</div> *@

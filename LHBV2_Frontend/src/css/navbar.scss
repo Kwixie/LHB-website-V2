@@ -59,6 +59,8 @@ nav .nav-layout {
   /* color: rgba(16, 31, 60, 1); */
   /* border-bottom: 2px solid purple; */
   color: purple;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
