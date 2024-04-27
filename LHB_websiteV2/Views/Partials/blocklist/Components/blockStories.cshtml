@@ -1,0 +1,42 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var component = (ContentModels.BlockStories)Model.Content;
+
+    var homePage = Umbraco.AssignedContentItem.AncestorOrSelf<StartPage>();
+    var storiesPage = homePage.DescendantOfType("whoWeArePage");
+    var contentStories = (ContentModels.WhoWeArePage)storiesPage;
+    var i = 1;
+}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row section">
+
+            <h1 class="text-center mb-5">@component.TextTitle</h1>
+
+            @{
+                var stories = contentStories.Value<IEnumerable<BlockListItem>>("blocklistStory").Take(4);
+                
+            }
+
+            @foreach (var story in stories)
+            {
+                
+                var contentStory = (ContentModels.CompStory)story.Content;
+                <div class="col-md-3">
+                    <img src=@contentStory.Image.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block mb-4" />
+                    <h3>@contentStory.TextPresentation</h3>
+                    <p>@contentStory.TextTeaser <a href="@($"{contentStories.Url()}#story{i}")"><span class="read-more">  Läs mer</span></a></p>
+                </div>
+
+                i++;
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.button-primary {
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.btn-inverted {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.7rem 1.5rem;
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}
+
+.article-link {
+  font-weight: 600;
+  color: #890fb0;
+  font-size: 20px;
+}
+.article-link:hover {
+  opacity: 60%;
+}
+
+.read-more {
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+p a {
+  color: #890fb0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+  color: #d377f1;
+}

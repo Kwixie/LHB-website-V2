@@ -1,0 +1,84 @@
+text-white {
+  color: white;
+}
+text-black {
+  color: black;
+}
+
+// THEMES
+
+body.svart {
+  p {
+    a {
+      color: var(--purple);
+    }
+  }
+  .button-primary {
+    background-color: black;
+    color: white;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      border: 2px black solid;
+    }
+  }
+  .btn-inverted {
+    color: black;
+    border: 2px black solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+body.röd {
+  p {
+    a {
+      color: var(--red);
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+    }
+  }
+  .button-primary {
+    background-color: var(--red);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--red);
+    border: 2px var(--red) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--red);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--red);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--red);
+    }
+  }
+  .article-link {
+    color: var(--red);
+    svg {
+      fill: var(--red);
+    }
+  }
+}

@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LHB_websiteV2", "LHB_websiteV2\LHB_websiteV2.csproj", "{AFB1503D-DB63-414F-8774-E036FBDA5992}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LHBV2_Frontend", "LHBV2_Frontend\LHBV2_Frontend.shproj", "{48219655-0920-4199-8C86-CE399F97A09A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +21,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC91A262-FE8C-4C52-8704-1364DDFE9845}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		LHBV2_Frontend\LHBV2_Frontend.projitems*{48219655-0920-4199-8c86-ce399f97a09a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

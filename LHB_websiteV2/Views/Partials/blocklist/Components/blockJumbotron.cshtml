@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks;
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var component = (BlockJumbotron)Model.Content;
+    var textColor = component.TextColor ? "text-white" : "text-black";
+}
+
+
+<div class="jumbotron text-center jumbotron-fluid @textColor" style="background-color: @component.ColorBg">
+    <div class="container py-4">
+        <h1 class="display-4 bg-blue">@component.TextHeading</h1>
+        <h5>
+            @component.RteBody
+        </h5>
+    </div>
+</div>

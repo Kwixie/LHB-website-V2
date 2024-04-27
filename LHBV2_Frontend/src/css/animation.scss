@@ -1,0 +1,35 @@
+.arrow-container {
+  text-align: center;
+  height: 0px;
+  position: relative;
+  width: 100%;
+}
+
+.arrow-down {
+  width: 150px; /* Set the width and height to match your SVG */
+  height: 150px;
+  fill: #000; /* Arrow color */
+  position: relative;
+  animation: bounce 1s infinite alternate;
+  position: absolute;
+  top: -129px;
+  left: calc(50% - 75px);
+  cursor: pointer;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px); /* Adjust bounce height */
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px); /* Adjust bounce height */
+  }
+}

@@ -1,0 +1,22 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks;
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var component = (BlockTextImage)Model.Content;
+    var textColor = component.TextColor ? "text-white" : "text-black";
+}
+
+<div class="container-fluid @textColor" style="background-color: @component.ColorBg">
+    <div class="container">
+        <div class="row section">
+            <div class="col-md-8">
+                <h2>@component.TextHeading</h2>
+                <div class="rte">@component.RteBody</div>
+                <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button">@component.LinkBtnAbout.Name</a>
+            </div>
+            <div class="col-md-4">
+                <img src=@component.ImageSingle.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" />
+            </div>
+        </div>
+    </div>
+</div>

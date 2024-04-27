@@ -9,24 +9,35 @@
 
     var storiesPage = Model.DescendantOfType("whoWeArePage");
     var contentStoriesPage = (ContentModels.WhoWeArePage)storiesPage;
-
-
 }
 
-<!-- Hero -->
 @if (Model.ImageHero != null)
 {
     <div class="hero-wrapper">
-        <img src=@Model.LogoImage.GetCropUrl("logo") class="img-logo" />
+        <img src=@Model.ImageLogo.GetCropUrl("logo") class="img-logo" />
         <img src=@Model.ImageHero.GetCropUrl("hero") class="img-fluid hero-style" />
        
     </div>
 
 }
+
+<div class="arrow-container">
+    <img class="arrow-down" width="30px" src="/images/down-arrow.svg"/>
+</div>
+
+
+@if (Model.BlockListSections != null && Model.BlockListSections.Any())
+{
+    <div>
+        @Html.GetBlockListHtml(Model.BlockListSections)
+    </div>
+}
+
+@* <!-- Hero -->
 <!-- Jumbotron, w title -->
 <div class="jumbotron text-center jumbotron-fluid">
     <div class="container py-4">
-        <h1 class="display-4">@Model.TextHeading</h1>
+        <h1 class="display-4 bg-blue">@Model.TextHeading</h1>
         <h5>
             @Model.RteBody
         </h5>
@@ -93,28 +104,7 @@
 
 
 <!-- Member stories -->
-<div class="container-fluid">
-    <div class="container">
-        <div class="row section">
 
-            <h1 class="text-center mb-5">@Model.TextTitleStories</h1>
-
-            @{
-                var stories = contentStoriesPage.Value<IEnumerable<BlockListItem>>("blocklistStory").Take(4);
-            }
-
-            @foreach (var story in stories)
-            {
-                var contentStory = (ContentModels.CompStory)story.Content;
-                <div class="col-md-3">
-                    <img src=@contentStory.Image.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block mb-4" />
-                    <h3>@contentStory.TextPresentation</h3>
-                    <p>@contentStory.TextTeaser <a href="@contentStoriesPage.Url()"><span class="read-more">  Läs mer</span></a></p>
-                </div>
-            }
-        </div>
-    </div>
-</div>
 
 <!-- Call to Action -->
 <div class="container-fluid pink-bg cta">
@@ -126,4 +116,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@

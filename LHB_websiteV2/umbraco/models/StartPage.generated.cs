@@ -50,43 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Bakgrundsfärg
+		/// Välj sektion
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("bgColor")]
-		public virtual string BgColor => this.Value<string>(_publishedValueFallback, "bgColor");
-
-		///<summary>
-		/// Bakgrundsfärg
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("bgColorFooter")]
-		public virtual string BgColorFooter => this.Value<string>(_publishedValueFallback, "bgColorFooter");
-
-		///<summary>
-		/// Kort
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("blocklistCards")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel BlocklistCards => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "blocklistCards");
-
-		///<summary>
-		/// Visa sektion: Hämtar de fyra senaste berättelserna från "Vilka är vi"
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[ImplementPropertyType("boolShowSection")]
-		public virtual bool BoolShowSection => this.Value<bool>(_publishedValueFallback, "boolShowSection");
-
-		///<summary>
-		/// Bild
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("imageAbout")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageAbout => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageAbout");
+		[ImplementPropertyType("blockListSections")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel BlockListSections => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "blockListSections");
 
 		///<summary>
 		/// Hero bild
@@ -97,51 +66,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageHero");
 
 		///<summary>
-		/// Knapplänk
+		/// Logo splash: Ladda upp i .png bildformat. (jpg fungerar också, men är ej transparent)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linkBtnAbout")]
-		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtnAbout => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtnAbout");
-
-		///<summary>
-		/// Knapplänk
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linkBtnMember")]
-		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtnMember => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtnMember");
-
-		///<summary>
-		/// Logo: Ladda upp logo i .png (bakgrund ska vara transparent)
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("logoImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LogoImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "logoImage");
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("rteBody")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RteBody => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "rteBody");
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("rteBodyAbout")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RteBodyAbout => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "rteBodyAbout");
-
-		///<summary>
-		/// Textfärg
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[ImplementPropertyType("textColorFooter")]
-		public virtual bool TextColorFooter => this.Value<bool>(_publishedValueFallback, "textColorFooter");
+		[ImplementPropertyType("imageLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageLogo");
 
 		///<summary>
 		/// Kontaktmejl
@@ -152,51 +82,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string TextContactMail => this.Value<string>(_publishedValueFallback, "textContactMail");
 
 		///<summary>
-		/// Rubrik
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textHeading")]
-		public virtual string TextHeading => this.Value<string>(_publishedValueFallback, "textHeading");
-
-		///<summary>
-		/// Titel
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textHeadingCards")]
-		public virtual string TextHeadingCards => this.Value<string>(_publishedValueFallback, "textHeadingCards");
-
-		///<summary>
-		/// Text bli medlem
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textMember")]
-		public virtual string TextMember => this.Value<string>(_publishedValueFallback, "textMember");
-
-		///<summary>
-		/// Titel
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textTitleAbout")]
-		public virtual string TextTitleAbout => this.Value<string>(_publishedValueFallback, "textTitleAbout");
-
-		///<summary>
-		/// Titel
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textTitleStories")]
-		public virtual string TextTitleStories => this.Value<string>(_publishedValueFallback, "textTitleStories");
-
-		///<summary>
-		/// Färg på text navigering, knappar och små detaljer: Skriv in hex-kod för färgen, t.ex. #43135f
+		/// Temafärg: Färg på knappar, länkar, små detaljer
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("themeColor")]
-		public virtual string ThemeColor => this.Value<string>(_publishedValueFallback, "themeColor");
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ThemeColor => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(_publishedValueFallback, "themeColor");
 	}
 }

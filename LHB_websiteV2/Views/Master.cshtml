@@ -22,11 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css" />
     <link rel="stylesheet" href="/css/extra.css" />
-    <link rel="stylesheet" href="/dist/bundle.js" />
 
 </head>
 
-<body>
+<body class="@homePage.ThemeColor.Label">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
         <div class="container-lg">
@@ -37,9 +36,12 @@
 
             @if (homePage?.Children != null && homePage.Children.Any())
             {
+                var selection = Umbraco.ContentAtRoot().FirstOrDefault()
+                .Children()
+                .Where(x => x.IsVisible());
                 <div id="navbarNav" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
-                        @foreach (var child in homePage.Children)
+                        @foreach (var child in selection)
                         {
                             <li class="nav-item nav-item-style py-3 py-md-1">
                                 <a class="nav-link" href="@child.Url()">@child.Name</a>
@@ -72,6 +74,6 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
+    <script src="/dist/bundle.js"></script>
 </body>
 </html>
