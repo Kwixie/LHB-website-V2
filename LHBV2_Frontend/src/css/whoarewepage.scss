@@ -1,0 +1,27 @@
+.whoweare-page {
+  background-color: #f7eeff;
+}
+
+.whoweare-page .wrapper {
+  max-width: 770px;
+}
+
+.whoweare-page .heading {
+  max-width: 960px;
+}
+
+.whoweare-page > * .rte {
+  margin-top: 0 !important;
+}
+
+.rounded-img {
+  /*border-radius: 0 50% 50% 50%;*/
+  shape-outside: circle(50%);
+  float: left;
+  margin-right: 30px;
+  margin-top: 0px;
+  /*border: 10px solid var(--pink);*/
+  @media (max-width: 500px) {
+    width: 40%;
+  }
+}

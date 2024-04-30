@@ -1,0 +1,19 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks;
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var component = (BlockCta)Model.Content;
+    var button = component.BtnStylingToggle ? "button-primary" : "btn-inverted";
+    var textColor = component.TextColor ? "text-white" : "text-black";
+}
+
+<div class="container-fluid cta" style="background-color: @component.ColorBg">
+    <div class="container @textColor">
+        <div class="row section">
+            <div class="col-md-12 text-center">
+                <h1 class="mb-4">@component.TextCta</h1>
+                <a href="@component.LinkBtn.Url" class="btn @button" role="button" target=@component.LinkBtn.Target>@component.LinkBtn.Name</a>
+            </div>
+        </div>
+    </div>
+</div>

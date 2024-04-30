@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Artikelsida</summary>
 	[PublishedModel("articlePage")]
-	public partial class ArticlePage : PublishedContentModel
+	public partial class ArticlePage : PublishedContentModel, IBgColorPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,5 +64,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("textHeading")]
 		public virtual string TextHeading => this.Value<string>(_publishedValueFallback, "textHeading");
+
+		///<summary>
+		/// Dölj: Bara aktuellt för sidor på första nivå.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public virtual bool UmbracoNaviHide => this.Value<bool>(_publishedValueFallback, "umbracoNaviHide");
+
+		///<summary>
+		/// Bakgrundsfärg
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("bgColor")]
+		public virtual string BgColor => global::Umbraco.Cms.Web.Common.PublishedModels.BgColorPage.GetBgColor(this, _publishedValueFallback);
 	}
 }

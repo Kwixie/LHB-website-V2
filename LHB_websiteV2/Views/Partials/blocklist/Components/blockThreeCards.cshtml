@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inherits UmbracoViewPage<BlockListItem>
+
+@{
+    var component = (BlockThreeCards)Model.Content;
+}
+
+<div class="container">
+    <div class="row section">
+        <div class="col-md-12">
+            <h1>@component.TextHeadingCards</h1>
+        </div>
+
+        @{
+            var cards = component.Value<IEnumerable<BlockListItem>>("blocklistCards");
+        }
+
+        @foreach (var card in cards)
+        {
+            var content = (ContentModels.CompNewsCard)card.Content;
+            var link = content.LinkCard as Link;
+
+
+            <div class="col-md-4">
+                <div class="box-blog">
+                    <a href="@link.Url">
+                        <div class="blog-promoImage"
+                             style="
+                  background-image: url('@content.Image.Url()');
+                                            "></div>
+                    </a>
+                    <h5>@content.TextHeading</h5>
+                    <p class="blog-meta">@content.StringDate</p>
+                    <p>
+                        @content.TextString
+                    </p>
+                </div>
+                <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
+            </div>
+
+        }
+    </div>
+</div>
