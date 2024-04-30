@@ -135,7 +135,7 @@ body.lila {
   }
 }
 
-/* LILA RÖDLILA */
+/* RÖDLILA TEMAFÄRG */
 
 body.rödlila {
   p {
@@ -181,6 +181,256 @@ body.rödlila {
     color: var(--redpurple);
     svg {
       fill: var(--redpurple);
+    }
+  }
+}
+
+/* ORANGE TEMAFÄRG */
+
+body.orange {
+  p {
+    a {
+      color: var(--orange);
+      // &:hover,
+      // &:focus {
+      //   opacity: 0.7;
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .button-primary {
+    background-color: var(--orange);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--orange);
+    border: 2px var(--orange) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--orange);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--orange);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--orange);
+    }
+  }
+  .article-link {
+    color: var(--orange);
+    svg {
+      fill: var(--orange);
+    }
+  }
+}
+
+/* GUL TEMAFÄRG */
+
+body.gul {
+  p {
+    a {
+      color: var(--yellow);
+      // &:hover,
+      // &:focus {
+      //   opacity: 0.7;
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .button-primary {
+    background-color: var(--yellow);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--yellow);
+    border: 2px var(--yellow) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--yellow);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--yellow);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--yellow);
+    }
+  }
+  .article-link {
+    color: var(--yellow);
+    svg {
+      fill: var(--yellow);
+    }
+  }
+}
+
+/* GRÖN TEMAFÄRG */
+
+body.grön {
+  p {
+    a {
+      color: var(--green);
+      // &:hover,
+      // &:focus {
+      //   opacity: 0.7;
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .button-primary {
+    background-color: var(--green);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--green);
+    border: 2px var(--green) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--green);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--green);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--green);
+    }
+  }
+  .article-link {
+    color: var(--green);
+    svg {
+      fill: var(--green);
+    }
+  }
+}
+
+/* GRÖNBLÅ TEMAFÄRG */
+
+body.grönblå {
+  p {
+    a {
+      color: var(--greenblue);
+      // &:hover,
+      // &:focus {
+      //   opacity: 0.7;
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .button-primary {
+    background-color: var(--greenblue);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--greenblue);
+    border: 2px var(--greenblue) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--greenblue);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--greenblue);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--greenblue);
+    }
+  }
+  .article-link {
+    color: var(--greenblue);
+    svg {
+      fill: var(--greenblue);
+    }
+  }
+}
+
+/* BLÅ TEMAFÄRG */
+
+body.blå {
+  p {
+    a {
+      color: var(--blue);
+      // &:hover,
+      // &:focus {
+      //   opacity: 0.7;
+      //   text-decoration: underline;
+      // }
+    }
+  }
+  .button-primary {
+    background-color: var(--blue);
+    color: white;
+  }
+  .btn-inverted {
+    color: var(--blue);
+    border: 2px var(--blue) solid;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--blue);
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--blue);
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .nav-item-style:not(:last-child) {
+    @media (max-width: 767px) {
+      border-bottom: solid 1px var(--blue);
+    }
+  }
+  .article-link {
+    color: var(--blue);
+    svg {
+      fill: var(--blue);
     }
   }
 }
