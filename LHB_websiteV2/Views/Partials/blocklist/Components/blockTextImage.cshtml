@@ -21,7 +21,7 @@
 
                 @if (component.LinkBtnAbout != null && !string.IsNullOrEmpty(component.LinkBtnAbout.Url) && !string.IsNullOrEmpty(component.LinkBtnAbout.Name))
                 {
-                    <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button">@component.LinkBtnAbout.Name</a>
+                    <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button" target=@component.LinkBtnAbout.Target>@component.LinkBtnAbout.Name</a>
                 }
 
             </div>
