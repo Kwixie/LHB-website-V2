@@ -10,11 +10,14 @@
 <div class="container">
     <div class="row section">
         <div class="col-md-12">
-            <h1>@component.TextHeadingCards</h1>
+            @if (!string.IsNullOrWhiteSpace(component.TextHeadingCards))
+            {
+                <h1>@component.TextHeadingCards</h1>
+            }
         </div>
 
         @{
-            var cards = component.Value<IEnumerable<BlockListItem>>("blocklistCards");
+            var cards = component.Value<IEnumerable<BlockListItem>>("blocklistCards") ?? Enumerable.Empty<BlockListItem>();
         }
 
         @foreach (var card in cards)
@@ -22,24 +25,41 @@
             var content = (ContentModels.CompNewsCard)card.Content;
             var link = content.LinkCard as Link;
 
-
             <div class="col-md-4">
                 <div class="box-blog">
-                    <a href="@link.Url">
-                        <div class="blog-promoImage"
-                             style="
-                  background-image: url('@content.Image.Url()');
-                                            "></div>
-                    </a>
-                    <h5>@content.TextHeading</h5>
-                    <p class="blog-meta">@content.StringDate</p>
-                    <p>
-                        @content.TextString
-                    </p>
+                    @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
+                    {
+                        <a href="@link.Url">
+                            @if (content.Image != null && !string.IsNullOrWhiteSpace(content.Image.Url()))
+                            {
+                                <div class="blog-promoImage" style="background-image: url('@content.Image.Url()');"></div>
+                            }
+                            else
+                            {
+                                <div class="blog-promoImage">No image available</div>
+                            }
+                        </a>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(content.TextHeading))
+                    {
+                        <h5>@content.TextHeading</h5>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(content.StringDate))
+                    {
+                        <p class="blog-meta">content.StringDate</p>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(content.TextString))
+                    {
+                        <p>@content.TextString</p>
+                    }
+                    
                 </div>
-                <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
+                @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
+                {
+                    <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
+                }
             </div>
-
         }
+
     </div>
 </div>
