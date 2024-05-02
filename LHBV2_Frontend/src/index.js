@@ -3,7 +3,7 @@ import buttonstyles from "./css/buttons.scss";
 import startpagestyles from "./css/startpage.scss";
 import navbarstyles from "./css/navbar.scss";
 import articlepagestyles from "./css/articlepage.scss";
-import colorstyles from "./css/colors.scss";
+import colorstyles from "./css/colorthemes.scss";
 import investigatestyles from "./css/investigatepage.scss";
 import rtestyles from "./css/rte.scss";
 import typostyles from "./css/typography.scss";

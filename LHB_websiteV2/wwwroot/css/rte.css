@@ -1,0 +1,51 @@
+/*body {
+}*/
+
+
+
+.btn {
+	font-weight: 400;
+	border-width: 1px;
+	border-color: transparent;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/**umb_name:Knapp med färg*/
+.btn.button-primary {
+	padding: 0.7rem 1.5rem;
+	border-radius: 9999px;
+	background-color: black;
+	color: white;
+}
+
+/**umb_name:Knapp inverterad*/
+.btn.btn-inverted {
+	background-color: white;
+	border-radius: 9999px;
+	padding: 0.7rem 1.5rem;
+	color: black;
+	border: 2px black solid;
+}
+
+/**umb_name:Rubrik H2*/
+h2 {
+}
+
+/**umb_name:Rubrik H3*/
+h3 {
+}
+
+
+p a {
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+		opacity: 0.7;
+		text-decoration: underline;
+
+	}

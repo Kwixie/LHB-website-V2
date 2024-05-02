@@ -45,9 +45,14 @@ main {
   background-color: white;
   border-radius: 9999px;
   padding: 0.7rem 1.5rem;
+  opacity: 1;
 }
 .btn-inverted:hover, .btn-inverted:focus {
   color: white;
+}
+
+span .btn-inverted {
+  padding: 0.7rem 0.5rem;
 }
 
 .article-link {
@@ -78,6 +83,22 @@ p a:hover,
 p a:focus {
   opacity: 0.7;
   text-decoration: underline;
+}
+
+body .btn-inverted a:hover,
+body .btn-inverted a:focus,
+body .btn-inverted:hover,
+body .btn-inverted:focus {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+}
+
+body .btn-inverted a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 /*!***************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/startpage.scss ***!
@@ -275,9 +296,9 @@ nav .nav-layout {
 .article-page .wrapper {
   max-width: 770px;
 }
-/*!************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/colors.scss ***!
-  \************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/colorthemes.scss ***!
+  \*****************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 text-white {
   color: white;
