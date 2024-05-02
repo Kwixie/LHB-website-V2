@@ -18,11 +18,15 @@
     <div class="container">
         <div class="row section">
 
-            <h1 class="text-center mb-5">@component.TextTitle</h1>
+
+            @if (@component.TextTitle != null)
+            {
+                <h1 class="text-center mb-5">@component.TextTitle</h1>
+            }
 
             @{
-                var stories = contentStories.Value<IEnumerable<BlockListItem>>("blocklistStory").Take(4);
-                
+                var storyCollection = contentStories?.Value<IEnumerable<BlockListItem>>("blocklistStory");
+                IEnumerable<BlockListItem> stories = storyCollection != null ? storyCollection.Take(4) : Enumerable.Empty<BlockListItem>();
             }
 
             @foreach (var story in stories)
@@ -30,9 +34,23 @@
                 
                 var contentStory = (ContentModels.CompStory)story.Content;
                 <div class="col-md-3">
-                    <img src=@contentStory.Image.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block mb-4" />
-                    <h3>@contentStory.TextPresentation</h3>
-                    <p>@contentStory.TextTeaser <a href="@($"{contentStories.Url()}#story{i}")"><span class="read-more">  Läs mer</span></a></p>
+                    @if (contentStory.Image != null)
+                    {
+                        var imageUrl = contentStory.Image.GetCropUrl("standard");
+                        if (!string.IsNullOrWhiteSpace(imageUrl))
+                        {
+                            <img src="@imageUrl" class="img-fluid text-center mx-auto d-block mb-4" />
+                        }
+                    }
+                    @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))
+                    { 
+                        <h3>@contentStory.TextPresentation</h3>
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(contentStory.TextTeaser))
+                    {
+                        <p>@contentStory.TextTeaser <a href="@($"{contentStories?.Url()}#story{i}")"><span class="read-more">  Läs mer</span></a></p>
+                    }
                 </div>
 
                 i++;

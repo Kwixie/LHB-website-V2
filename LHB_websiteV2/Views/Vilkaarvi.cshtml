@@ -12,21 +12,39 @@
     <div class="container wrapper">
         <div class="row section">
             <div class="col-md-12">
-                <h1 class="heading">@Model.TextHeading</h1>
-           
-
-            @foreach (var story in Model.BlocklistStory)
-            {
-                var contentStory = (ContentModels.CompStory)story.Content;
-                
-
-                    <div class="my-5" id="@($"story{i}")">
-                            <img src="@contentStory.Image.GetCropUrl("standard")" class="float-start img-fluid rounded-img" />
-                            <h3 class="mt-2 p-3 mb-0">@contentStory.TextPresentation</h3>
-                            <div class="rte mt-3"> @contentStory.RteBody </div>
-                    </div>
-                    i++;
+                @if (!string.IsNullOrWhiteSpace(Model.TextHeading))
+                {
+                    <h1 class="heading">@Model.TextHeading</h1>
                 }
+
+                @{
+                    if (Model.BlocklistStory != null)
+                    {
+                        var index = 1; 
+                        foreach (var story in Model.BlocklistStory)
+                        {
+                            if (story?.Content is ContentModels.CompStory contentStory)
+                            {
+                                <div class="my-5" id="@($"story{index}")">
+                                    @if (contentStory.Image != null)
+                                    {
+                                        <img src="@contentStory.Image.GetCropUrl("standard")" class="float-start img-fluid rounded-img" />
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))
+                                    {
+                                        <h3 class="mt-2 p-3 mb-0">@contentStory.TextPresentation</h3>
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(contentStory.RteBody?.ToString()))
+                                    {
+                                        <div class="rte mt-3">@Html.Raw(contentStory.RteBody)</div>
+                                    }
+                                </div>
+                                index++; 
+                            }
+                        }
+                    }
+                }
+
             </div>
         </div>
     </div>

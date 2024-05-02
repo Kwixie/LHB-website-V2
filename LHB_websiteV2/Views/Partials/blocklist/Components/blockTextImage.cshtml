@@ -1,5 +1,4 @@
-﻿@using Umbraco.Cms.Core.Models
-@using Umbraco.Cms.Core.Models.Blocks;
+﻿@using Umbraco.Cms.Core.Models.Blocks;
 @inherits UmbracoViewPage<BlockListItem>
 
 @{
@@ -11,16 +10,30 @@
     <div class="container">
         <div class="row section">
             <div class="col-md-8">
-                <h2>@component.TextHeading</h2>
-                <div class="rte">@component.RteBody</div>
-                <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button">@component.LinkBtnAbout.Name</a>
-            </div>
-            <div class="col-md-4">
-                @{
-                    var image = (MediaWithCrops<Image>)component.ImageSingle;
+                @if (!string.IsNullOrWhiteSpace(component.TextHeading))
+                {
+                    <h2>@component.TextHeading</h2>
+                }
+                @if (component.RteBody != null && !string.IsNullOrWhiteSpace(component.RteBody.ToString()))
+                {
+                    <div class="rte">@component.RteBody</div>
                 }
 
-                <img src=@component.ImageSingle.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" alt="@(image.Content.AltText)"/>
+                @if (component.LinkBtnAbout != null && !string.IsNullOrEmpty(component.LinkBtnAbout.Url) && !string.IsNullOrEmpty(component.LinkBtnAbout.Name))
+                {
+                    <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button">@component.LinkBtnAbout.Name</a>
+                }
+
+            </div>
+            <div class="col-md-4">
+                @if (component.ImageSingle != null)
+                {
+                    var imageUrl = component.ImageSingle.GetCropUrl("standard");
+                    if (!string.IsNullOrWhiteSpace(imageUrl))
+                    {
+                        <img src="@imageUrl" class="img-fluid text-center mx-auto d-block" />
+                    }
+                }
             </div>
         </div>
     </div>
