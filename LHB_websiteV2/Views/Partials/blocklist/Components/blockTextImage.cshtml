@@ -1,4 +1,5 @@
-﻿@using Umbraco.Cms.Core.Models.Blocks;
+﻿@using Umbraco.Cms.Core.Models
+@using Umbraco.Cms.Core.Models.Blocks;
 @inherits UmbracoViewPage<BlockListItem>
 
 @{
@@ -15,7 +16,11 @@
                 <a href="@component.LinkBtnAbout.Url" class="btn button-primary mb-4" role="button">@component.LinkBtnAbout.Name</a>
             </div>
             <div class="col-md-4">
-                <img src=@component.ImageSingle.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" />
+                @{
+                    var image = (MediaWithCrops<Image>)component.ImageSingle;
+                }
+
+                <img src=@component.ImageSingle.GetCropUrl("standard") class="img-fluid text-center mx-auto d-block" alt="@(image.Content.AltText)"/>
             </div>
         </div>
     </div>
