@@ -14,7 +14,7 @@
 @if (Model.ImageLogo != null)
 {
     <div class="hero-wrapper">
-        <img src=@Model.ImageLogo.GetCropUrl("logo") class="img-logo" />
+        <img src=@Model.ImageLogo.GetCropUrl("logo") alt="LHB-logga" class="img-logo" />
     </div>
 
 }
@@ -22,14 +22,19 @@
 @if (Model.ImageHero != null)
 {
     <div class="hero-wrapper">
-        <img src=@Model.ImageHero.GetCropUrl("hero") class="img-fluid hero-style" />
+        @{
+        var heroImage = Model.ImageHero as IPublishedContent;
+        var altText = heroImage.HasValue("altText") ? heroImage.Value<string>
+            ("altText") : string.Empty;
+        }
+        <img src=@Model.ImageHero.GetCropUrl("hero") alt="@altText" class="img-fluid hero-style" />
        
     </div>
 
 }
 
 <div class="arrow-container">
-    <img class="arrow-down" width="30px" src="/images/down-arrow.svg"/>
+    <img class="arrow-down" alt="Pil som pekar nedåt" width="30px" src="/images/down-arrow.svg"/>
 </div>
 
 
