@@ -37,9 +37,12 @@
                     @if (contentStory.Image != null)
                     {
                         var imageUrl = contentStory.Image.GetCropUrl("standard");
+                        var image = contentStory.Image as IPublishedContent;
+                        var altText = image.HasValue("altText") ? image.Value<string>("altText") : string.Empty;
+
                         if (!string.IsNullOrWhiteSpace(imageUrl))
                         {
-                            <img src="@imageUrl" class="img-fluid text-center mx-auto d-block mb-4" />
+                            <img src="@imageUrl" alt="@altText" class="img-fluid text-center mx-auto d-block mb-4" />
                         }
                     }
                     @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))

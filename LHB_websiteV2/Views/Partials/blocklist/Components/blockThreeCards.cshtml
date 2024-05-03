@@ -27,16 +27,14 @@
 
             <div class="col-md-4">
                 <div class="box-blog">
+
+
                     @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
                     {
-                        <a href="@link.Url">
+                        <a href="@link.Url" target=@link.Target>
                             @if (content.Image != null && !string.IsNullOrWhiteSpace(content.Image.Url()))
                             {
                                 <div class="blog-promoImage" style="background-image: url('@content.Image.Url()');"></div>
-                            }
-                            else
-                            {
-                                <div class="blog-promoImage">No image available</div>
                             }
                         </a>
                     }
@@ -56,7 +54,7 @@
                 </div>
                 @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
                 {
-                    <a href="@link.Url" class="btn btn-inverted">Läs mer</a>
+                    <a href="@link.Url" target=@link.Target class="btn btn-inverted">Läs mer</a>
                 }
             </div>
         }

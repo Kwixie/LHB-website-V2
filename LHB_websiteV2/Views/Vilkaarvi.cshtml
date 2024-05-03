@@ -28,7 +28,10 @@
                                 <div class="my-5" id="@($"story{index}")">
                                     @if (contentStory.Image != null)
                                     {
-                                        <img src="@contentStory.Image.GetCropUrl("standard")" class="float-start img-fluid rounded-img" />
+                                        var storyImage = contentStory.Image as IPublishedContent;
+                                        var altText = storyImage.HasValue("altText") ? storyImage.Value<string>("altText") : string.Empty;
+
+                                        <img src="@contentStory.Image.GetCropUrl("standard")" alt="@altText" class="float-start img-fluid rounded-img" />
                                     }
                                     @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))
                                     {
