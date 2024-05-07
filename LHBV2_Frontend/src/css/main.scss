@@ -5,13 +5,22 @@
   // --light-purple: #553198;
   // --violet: #503c73;
   // --blue: #1e1b37;
-  --red: #990000;
-  --orange: #b45f06;
-  --yellow: #bf9000;
-  --green: #38761d;
+  // --red: #990000;
+  // --orange: #b45f06;
+  // --yellow: #bf9000;
+  // --green: #38761d;
+  // --greenblue: #134f5c;
+  // --blue: #0b5394;
+  // --purple: #711082;
+  // --redpurple: #741b47;
+
+  --red: #e40303;
+  --orange: #e88400;
+  --yellow: #f4c708;
+  --green: #008026;
   --greenblue: #134f5c;
-  --blue: #0b5394;
-  --purple: #711082;
+  --blue: #074cd6;
+  --purple: #8d1cb7;
   --redpurple: #741b47;
 }
 
@@ -46,5 +55,14 @@ main {
   @media screen and (max-width: 576px) {
     margin-bottom: 15px;
     margin-top: -20px;
+  }
+}
+
+.hero-float {
+  margin-left: 25px;
+  margin-bottom: 25px;
+
+  @media (min-width: 576px) {
+    max-width: 400px;
   }
 }

@@ -2,13 +2,13 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/main.scss ***!
   \**********************************************************************************************************************************************************************************/
 :root {
-  --red: #990000;
-  --orange: #b45f06;
-  --yellow: #bf9000;
-  --green: #38761d;
+  --red: #e40303;
+  --orange: #e88400;
+  --yellow: #f4c708;
+  --green: #008026;
   --greenblue: #134f5c;
-  --blue: #0b5394;
-  --purple: #711082;
+  --blue: #074cd6;
+  --purple: #8d1cb7;
   --redpurple: #741b47;
 }
 
@@ -43,6 +43,16 @@ main {
   .secondary-hero-image {
     margin-bottom: 15px;
     margin-top: -20px;
+  }
+}
+
+.hero-float {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+@media (min-width: 576px) {
+  .hero-float {
+    max-width: 400px;
   }
 }
 /*!*************************************************************************************************************************************************************************************!*\
@@ -157,6 +167,12 @@ body .btn-inverted a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 300px;
+}
+
+.hero-background-color {
+  height: calc(100vh - 60px);
+  width: 100%;
+  max-height: 850px;
 }
 
 /* ---------- JUMBOTRON ---------- */

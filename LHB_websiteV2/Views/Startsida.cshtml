@@ -27,6 +27,15 @@
         }
     </div>
 
+} else
+{
+    <div class="hero-background-color hero-wrapper" style="background-color: @Model.BgColorHero">
+        @if (Model.ImageLogo != null)
+        {
+            <img src=@Model.ImageLogo.GetCropUrl("logo") alt="LHB-logga" class="img-logo" />
+        }
+
+    </div>
 }
 
 <div class="arrow-container">
