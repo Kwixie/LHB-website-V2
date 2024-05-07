@@ -30,12 +30,32 @@ main {
   max-width: 100%;
   height: auto;
 }
+
+.secondary-hero-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: -40px;
+}
+@media screen and (max-width: 576px) {
+  .secondary-hero-image {
+    margin-bottom: 15px;
+    margin-top: -20px;
+  }
+}
 /*!*************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/buttons.scss ***!
   \*************************************************************************************************************************************************************************************/
 .button-primary {
   padding: 0.7rem 1.5rem;
   border-radius: 9999px;
+  font-weight: 400;
+  border-width: 1px;
+  border-color: transparent;
+  display: inline-block;
+  cursor: pointer;
 }
 .button-primary:hover, .button-primary:focus {
   opacity: 0.7;
@@ -46,6 +66,11 @@ main {
   border-radius: 9999px;
   padding: 0.7rem 1.5rem;
   opacity: 1;
+  font-weight: 400;
+  border-width: 1px;
+  border-color: transparent;
+  display: inline-block;
+  cursor: pointer;
 }
 .btn-inverted:hover, .btn-inverted:focus {
   color: white;
@@ -99,6 +124,15 @@ body .btn-inverted a {
   padding-bottom: 10px;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+body .button-primary a {
+  color: white !important;
+  font-weight: 400;
+}
+
+body .btn-inverted a {
+  font-weight: 400;
 }
 /*!***************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/css/startpage.scss ***!
@@ -648,11 +682,9 @@ p {
 .whoweare-page {
   background-color: #f7eeff;
 }
-
 .whoweare-page .wrapper {
   max-width: 770px;
 }
-
 .whoweare-page .heading {
   max-width: 960px;
 }

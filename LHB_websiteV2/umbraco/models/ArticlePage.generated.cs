@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Artikelsida</summary>
 	[PublishedModel("articlePage")]
-	public partial class ArticlePage : PublishedContentModel, IBgColorPage
+	public partial class ArticlePage : PublishedContentModel, IBgColorPage, ICompImageHero
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -79,5 +79,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("bgColor")]
 		public virtual string BgColor => global::Umbraco.Cms.Web.Common.PublishedModels.BgColorPage.GetBgColor(this, _publishedValueFallback);
+
+		///<summary>
+		/// Bild
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("imageHero")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero => global::Umbraco.Cms.Web.Common.PublishedModels.CompImageHero.GetImageHero(this, _publishedValueFallback);
+
+		///<summary>
+		/// Bildbredd desktop: Ange bredd (pixlar). Fullbredd är 770. I mobil tar bilden upp fullbredd.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[ImplementPropertyType("widthDesktop")]
+		public virtual int WidthDesktop => global::Umbraco.Cms.Web.Common.PublishedModels.CompImageHero.GetWidthDesktop(this, _publishedValueFallback);
 	}
 }

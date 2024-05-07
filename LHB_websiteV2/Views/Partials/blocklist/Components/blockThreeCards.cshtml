@@ -44,7 +44,7 @@
                     }
                     @if (!string.IsNullOrWhiteSpace(content.StringDate))
                     {
-                        <p class="blog-meta">content.StringDate</p>
+                        <p class="blog-meta">@content.StringDate</p>
                     }
                     @if (!string.IsNullOrWhiteSpace(content.TextString))
                     {
@@ -54,7 +54,7 @@
                 </div>
                 @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
                 {
-                    <a href="@link.Url" target=@link.Target class="btn btn-inverted">Läs mer</a>
+                    <a href="@link.Url" target="@link.Target" class="btn btn-inverted">Läs mer</a>
                 }
             </div>
         }

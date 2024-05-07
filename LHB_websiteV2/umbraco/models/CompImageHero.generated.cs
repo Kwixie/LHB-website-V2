@@ -18,14 +18,28 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Vilka är vi</summary>
-	[PublishedModel("whoWeArePage")]
-	public partial class WhoWeArePage : PublishedContentModel, IBgColorPage, ICompImageHero
+	// Mixin Content Type with alias "compImageHero"
+	/// <summary>Bild överst understartsida</summary>
+	public partial interface ICompImageHero : IPublishedElement
+	{
+		/// <summary>Bild</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero { get; }
+
+		/// <summary>Bildbredd desktop</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		int WidthDesktop { get; }
+	}
+
+	/// <summary>Bild överst understartsida</summary>
+	[PublishedModel("compImageHero")]
+	public partial class CompImageHero : PublishedElementModel, ICompImageHero
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		public new const string ModelTypeAlias = "whoWeArePage";
+		public new const string ModelTypeAlias = "compImageHero";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
@@ -34,14 +48,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<WhoWeArePage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<CompImageHero, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public WhoWeArePage(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public CompImageHero(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,49 +64,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Lägg till berättelse
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("blocklistStory")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel BlocklistStory => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "blocklistStory");
-
-		///<summary>
-		/// Rubrik
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textHeading")]
-		public virtual string TextHeading => this.Value<string>(_publishedValueFallback, "textHeading");
-
-		///<summary>
-		/// Dölj: Bara aktuellt för sidor på första nivå.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => this.Value<bool>(_publishedValueFallback, "umbracoNaviHide");
-
-		///<summary>
-		/// Bakgrundsfärg
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("bgColor")]
-		public virtual string BgColor => global::Umbraco.Cms.Web.Common.PublishedModels.BgColorPage.GetBgColor(this, _publishedValueFallback);
-
-		///<summary>
 		/// Bild
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("imageHero")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero => global::Umbraco.Cms.Web.Common.PublishedModels.CompImageHero.GetImageHero(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageHero => GetImageHero(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Bild</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetImageHero(ICompImageHero that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "imageHero");
 
 		///<summary>
 		/// Bildbredd desktop: Ange bredd (pixlar). Fullbredd är 770. I mobil tar bilden upp fullbredd.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[ImplementPropertyType("widthDesktop")]
-		public virtual int WidthDesktop => global::Umbraco.Cms.Web.Common.PublishedModels.CompImageHero.GetWidthDesktop(this, _publishedValueFallback);
+		public virtual int WidthDesktop => GetWidthDesktop(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Bildbredd desktop</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		public static int GetWidthDesktop(ICompImageHero that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "widthDesktop");
 	}
 }
