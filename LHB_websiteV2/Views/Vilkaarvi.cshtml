@@ -24,7 +24,7 @@
                 @{
                     if (Model.BlocklistStory != null)
                     {
-                        var index = 1; 
+                        var index = 1;
                         foreach (var story in Model.BlocklistStory)
                         {
                             if (story?.Content is ContentModels.CompStory contentStory)
@@ -37,16 +37,26 @@
 
                                         <img src="@contentStory.Image.GetCropUrl("standard")" alt="@altText" class="float-start img-fluid rounded-img" />
                                     }
+
                                     @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))
                                     {
                                         <h3 class="mt-2 p-3 mb-0">@contentStory.TextPresentation</h3>
                                     }
+
+                                    @if (!string.IsNullOrWhiteSpace(contentStory.TextTeaser?.ToString()))
+                                    {
+                                        <div style="min-height: 140px" data-jsid="teaser-box">
+                                            <div class="rte mt-3" style="display: inline">@Html.Raw(contentStory.TextTeaser)</div>
+                                            <a role="button" class="read-more" style="display: inline"> Läs mer</a>
+                                        </div>
+                                    }
                                     @if (!string.IsNullOrWhiteSpace(contentStory.RteBody?.ToString()))
                                     {
-                                        <div class="rte mt-3">@Html.Raw(contentStory.RteBody)</div>
+                                        <div class="rte mt-3 hidden">@Html.Raw(contentStory.RteBody)</div>
+                                        // <a role="button" class="read-more read-less hidden" style="display: inline"> Visa mindre</a>
                                     }
                                 </div>
-                                index++; 
+                                index++;
                             }
                         }
                     }

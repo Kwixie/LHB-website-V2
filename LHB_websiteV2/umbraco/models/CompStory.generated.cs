@@ -74,7 +74,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string TextPresentation => this.Value<string>(_publishedValueFallback, "textPresentation");
 
 		///<summary>
-		/// Teaser text för startsidan
+		/// Teaser text: Första 3-4 meningarna från text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

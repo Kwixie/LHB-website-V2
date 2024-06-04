@@ -28,9 +28,9 @@
 
 <body class="@homePage.ThemeColor.Label">
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+    <nav class="navbar navbar-expand-lg shadow-sm navbar-dark bg-dark">
         <div class="container-lg">
-            <a class="navbar-brand" href="/"><img src="/images/inverterad_logo.png" width=60 alt="LHB logo" /></a>
+            <a class="navbar-brand" href="/"><img src="/images/home_logo.png" width=60 alt="LHB logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,16 +61,14 @@
     </main>
     <!-- Footer -->
     <div class="container-fluid footer">
-        <div class="container">
-            <div class="row section">
-                <div class="text-center">
-                    <img src="~/images/home_logo.png" class="img-fluid logo mb-4" alt="Arm with Umbraco Logo">
-                    @if (homePage != null && !string.IsNullOrEmpty(homePage.TextContactMail))
+        <div class="container section">
+            <div class="footer-items">
+                    @if (homePage.LinkBtn != null && !string.IsNullOrWhiteSpace(homePage.LinkBtn.Url))
                     {
-                        <p class="">Kontakt: @homePage.TextContactMail</p>
+                        <a href="@homePage.LinkBtn.Url" class="btn button-primary" role="button" target=@homePage.LinkBtn.Target>@homePage.LinkBtn.Name</a>
                     }
-                    <a href="https://x.com/LHBforbundet" target="_blank" style="display: block"><img src="/images/x-logo-white.png" style="width: 34px;" /> </a>
-                </div>
+                    <img src="~/images/home_logo.png" class="img-fluid logo my-4" alt="Arm with Umbraco Logo">
+                    <a href="https://x.com/LHBforbundet" target="_blank" class="twitter-icon"><img src="/images/x-logo-white.png" style="width: 34px;" /> </a>
             </div>
 
         </div>

@@ -82,12 +82,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ImageLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "imageLogo");
 
 		///<summary>
-		/// Kontaktmejl
+		/// Knapplänk
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textContactMail")]
-		public virtual string TextContactMail => this.Value<string>(_publishedValueFallback, "textContactMail");
+		[ImplementPropertyType("linkBtn")]
+		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtn => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtn");
 
 		///<summary>
 		/// Temafärg: Färg på knappar, länkar, små detaljer

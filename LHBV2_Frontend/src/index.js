@@ -13,6 +13,9 @@ import animationstyles from "./css/animation.scss";
 document.addEventListener("DOMContentLoaded", function () {
   var arrow = document.querySelector(".arrow-down");
 
+  if (arrow === null) {
+    return;
+  }
   arrow.addEventListener("click", function () {
     window.scrollBy({
       top: window.innerHeight, // Scroll down by viewport height
@@ -21,4 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-console.log("Hello World");
+document.addEventListener("DOMContentLoaded", function () {
+  const teaserBoxes = document.querySelectorAll("[data-jsid='teaser-box']");
+  console.log(teaserBoxes);
+
+  teaserBoxes.forEach((box) => {
+    const readMoreBtn = box.querySelector(".read-more");
+    const fullText = box.nextElementSibling;
+
+    readMoreBtn.addEventListener("click", function () {
+      box.classList.add("hidden"); // Hide the teaser box
+      fullText.classList.remove("hidden"); // Show the full text
+    });
+    // readLessButtons.addEventListener("click", function () {
+    //   fullText.classList.add("hidden"); // Hide the teaser box
+    //   box.classList.remove("hidden"); // Show the full text
+    // });
+  });
+});
