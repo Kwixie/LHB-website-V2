@@ -41,6 +41,10 @@
                             {
                                 <h3>@item.Title</h3>
                             }
+                            @if (!string.IsNullOrWhiteSpace(item.Date))
+                            {
+                                <h5 class="blog-meta" style="color: gray; font-size: 16px; font-style: italic" >Publicerat: @item.Date</h5>
+                            }
                             <div class="rte">
                                 @if (!string.IsNullOrEmpty(item.RteBody?.ToString()))
                                 {
@@ -49,7 +53,7 @@
                             </div>
                             @if (item.LinkSingle != null)
                             {
-                                <a href="@item.LinkSingle.Url" target=@item.LinkSingle.Target class="article-link" role="button">
+                                <a href="@item.LinkSingle.Url" target="@item.LinkSingle.Target" class="article-link" role="button">
 
                                     @item.LinkSingle.Name
                                     <svg fill="#890fb0" height="30px" width="30px" style="margin-left: 8px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

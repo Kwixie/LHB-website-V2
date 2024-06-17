@@ -88,13 +88,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("linkBtn")]
 		public virtual global::Umbraco.Cms.Core.Models.Link LinkBtn => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "linkBtn");
-
-		///<summary>
-		/// Temafärg: Färg på knappar, länkar, små detaljer
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("themeColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ThemeColor => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(_publishedValueFallback, "themeColor");
 	}
 }

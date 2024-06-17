@@ -25,9 +25,13 @@
             var content = (ContentModels.CompNewsCard)card.Content;
             var link = content.LinkCard as Link;
 
-            <div class="col-md-4">
+            <div class="col-md-4 card-container">
                 <div class="box-blog">
 
+                    @if (!string.IsNullOrWhiteSpace(content.TextTitle))
+                    {
+                        <h3>@content.TextTitle</h3>
+                    }
 
                     @if (link != null && !string.IsNullOrWhiteSpace(link.Url))
                     {

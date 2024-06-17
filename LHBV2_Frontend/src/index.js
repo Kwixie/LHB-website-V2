@@ -31,14 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
   teaserBoxes.forEach((box) => {
     const readMoreBtn = box.querySelector(".read-more");
     const fullText = box.nextElementSibling;
+    const parentDiv = box.parentElement;
 
     readMoreBtn.addEventListener("click", function () {
-      box.classList.add("hidden"); // Hide the teaser box
-      fullText.classList.remove("hidden"); // Show the full text
+      box.classList.add("hidden");
+      fullText.classList.remove("hidden");
+      window.location.hash = parentDiv.id;
+      console.log(parentDiv.id);
     });
-    // readLessButtons.addEventListener("click", function () {
-    //   fullText.classList.add("hidden"); // Hide the teaser box
-    //   box.classList.remove("hidden"); // Show the full text
-    // });
   });
 });

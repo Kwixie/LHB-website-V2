@@ -34,20 +34,21 @@
                                     {
                                         var storyImage = contentStory.Image as IPublishedContent;
                                         var altText = storyImage.HasValue("altText") ? storyImage.Value<string>("altText") : string.Empty;
-
-                                        <img src="@contentStory.Image.GetCropUrl("standard")" alt="@altText" class="float-start img-fluid rounded-img" />
+                                        <div style="text-align: center">
+                                            <img src="@contentStory.Image.GetCropUrl("standard")" alt="@altText" class="img-fluid rounded-img" />
+                                        </div>
                                     }
 
                                     @if (!string.IsNullOrWhiteSpace(contentStory.TextPresentation))
                                     {
-                                        <h3 class="mt-2 p-3 mb-0">@contentStory.TextPresentation</h3>
+                                        <h3 class="mt-2 p-md-3 py-2 mb-0">@contentStory.TextPresentation</h3>
                                     }
 
                                     @if (!string.IsNullOrWhiteSpace(contentStory.TextTeaser?.ToString()))
                                     {
                                         <div style="min-height: 140px" data-jsid="teaser-box">
                                             <div class="rte mt-3" style="display: inline">@Html.Raw(contentStory.TextTeaser)</div>
-                                            <a role="button" class="read-more" style="display: inline"> Läs mer</a>
+                                            <a role="button" class="read-more" style="display: inline; white-space: nowrap"> Läs mer</a>
                                         </div>
                                     }
                                     @if (!string.IsNullOrWhiteSpace(contentStory.RteBody?.ToString()))

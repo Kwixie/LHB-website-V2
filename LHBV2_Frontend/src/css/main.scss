@@ -1,19 +1,4 @@
 :root {
-  // --bs-navbar-color: purple;
-  // --purple: #43135f;
-  // --dark-purple: #221726;
-  // --light-purple: #553198;
-  // --violet: #503c73;
-  // --blue: #1e1b37;
-  // --red: #990000;
-  // --orange: #b45f06;
-  // --yellow: #bf9000;
-  // --green: #38761d;
-  // --greenblue: #134f5c;
-  // --blue: #0b5394;
-  // --purple: #711082;
-  // --redpurple: #741b47;
-
   --red: #e40303;
   --orange: #e88400;
   --yellow: #f4c708;
@@ -24,8 +9,15 @@
   --redpurple: #741b47;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 main {
-  min-height: calc(100vh - 365px);
+  // min-height: calc(100vh - 365px);
   background-color: #fff;
 }
 

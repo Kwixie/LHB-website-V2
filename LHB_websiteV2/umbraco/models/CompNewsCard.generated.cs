@@ -74,7 +74,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string StringDate => this.Value<string>(_publishedValueFallback, "stringDate");
 
 		///<summary>
-		/// Rubrik
+		/// Rubrik undre
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -88,5 +88,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("textString")]
 		public virtual string TextString => this.Value<string>(_publishedValueFallback, "textString");
+
+		///<summary>
+		/// Rubrik övre
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.2.2+79d241a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textTitle")]
+		public virtual string TextTitle => this.Value<string>(_publishedValueFallback, "textTitle");
 	}
 }

@@ -1,7 +1,17 @@
-.rte img {
-  max-width: 100%;
-}
+.rte {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
 
-.rte p:last-child {
-  margin-bottom: 10px;
+  p:last-child {
+    margin-bottom: 10px;
+  }
+
+  .btn-inverted,
+  .btn-primary {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
 }

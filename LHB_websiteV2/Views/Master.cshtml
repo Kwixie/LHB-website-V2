@@ -10,7 +10,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-@*     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d0182e9a-07a5-4ae2-a584-fe283c07e27d" data-blockingmode="auto" type="text/javascript"></script>  // SCRIPT for cookies from cookiebot. Will work with the right domain*@ 
+    @*     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d0182e9a-07a5-4ae2-a584-fe283c07e27d" data-blockingmode="auto" type="text/javascript"></script>  // SCRIPT for cookies from cookiebot. Will work with the right domain*@
     <title>LHB förbundet</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -22,57 +22,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css" />
-    
+
 
 </head>
 
-<body class="@homePage.ThemeColor.Label">
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg shadow-sm navbar-dark bg-dark">
+            <div class="container-lg">
+                <a class="navbar-brand" href="/"><img src="/images/home_logo.png" width=60 alt="LHB logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <nav class="navbar navbar-expand-lg shadow-sm navbar-dark bg-dark">
-        <div class="container-lg">
-            <a class="navbar-brand" href="/"><img src="/images/home_logo.png" width=60 alt="LHB logo" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                @if (homePage?.Children != null && homePage.Children.Any())
+                {
+                    var rootContent = Umbraco.ContentAtRoot().FirstOrDefault();
+                    var selection = rootContent != null ? rootContent.Children().Where(x => x.IsVisible()) : Enumerable.Empty<IPublishedContent>();
 
-            @if (homePage?.Children != null && homePage.Children.Any())
-            {
-                var rootContent = Umbraco.ContentAtRoot().FirstOrDefault();
-                var selection = rootContent != null ? rootContent.Children().Where(x => x.IsVisible()) : Enumerable.Empty<IPublishedContent>();
-
-                <div id="navbarNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        @foreach (var child in selection) 
-                        {
-                            <li class="nav-item nav-item-style py-3 py-md-1">
-                                <a class="nav-link" href="@child.Url()">@child.Name</a>
-                            </li>
-                        }
-                    </ul>
+                    <div id="navbarNav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            @foreach (var child in selection)
+                            {
+                                <li class="nav-item nav-item-style py-3 py-md-1">
+                                    <a class="nav-link" href="@child.Url()">@child.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+                <div class="nav-layout">
                 </div>
-            }
-            <div class="nav-layout">
-
             </div>
-        </div>
-    </nav>
-    <main>
-    @RenderBody()
-    </main>
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
     <!-- Footer -->
-    <div class="container-fluid footer">
+    <footer class="container-fluid footer">
         <div class="container section">
             <div class="footer-items">
-                    @if (homePage.LinkBtn != null && !string.IsNullOrWhiteSpace(homePage.LinkBtn.Url))
-                    {
-                        <a href="@homePage.LinkBtn.Url" class="btn button-primary" role="button" target=@homePage.LinkBtn.Target>@homePage.LinkBtn.Name</a>
-                    }
-                    <img src="~/images/home_logo.png" class="img-fluid logo my-4" alt="Arm with Umbraco Logo">
-                    <a href="https://x.com/LHBforbundet" target="_blank" class="twitter-icon"><img src="/images/x-logo-white.png" style="width: 34px;" /> </a>
+                @if (homePage.LinkBtn != null && !string.IsNullOrWhiteSpace(homePage.LinkBtn.Url))
+                {
+                    <a href="@homePage.LinkBtn.Url" class="btn btn-footer" role="button" target=@homePage.LinkBtn.Target>@homePage.LinkBtn.Name</a>
+                }
+                <img src="~/images/logo_med_text.png" class="img-fluid logo my-4" alt="Arm with Umbraco Logo">
+                <a href="https://x.com/LHBforbundet" target="_blank" class="twitter-icon"><img src="/images/x-logo-white.png" style="width: 34px;" /> </a>
             </div>
 
         </div>
-    </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
