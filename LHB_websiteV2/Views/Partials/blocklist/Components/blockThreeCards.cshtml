@@ -12,7 +12,7 @@
         <div class="col-md-12">
             @if (!string.IsNullOrWhiteSpace(component.TextHeadingCards))
             {
-                <h1>@component.TextHeadingCards</h1>
+                <h1 class="heading-three-cards">@component.TextHeadingCards</h1>
             }
         </div>
 
@@ -25,7 +25,7 @@
             var content = (ContentModels.CompNewsCard)card.Content;
             var link = content.LinkCard as Link;
 
-            <div class="col-md-4 card-container">
+            <div class="col-lg-4 card-container">
                 <div class="box-blog">
 
                     @if (!string.IsNullOrWhiteSpace(content.TextTitle))
