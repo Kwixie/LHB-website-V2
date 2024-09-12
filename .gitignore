@@ -477,7 +477,6 @@ LHB_websiteV2/umbraco/Logs/
 
 # Media files
 /wwwroot/media/
-LHB_websiteV2/wwwroot/images/
 LHB_websiteV2/wwwroot/media/
 LHB_websiteV2/umbraco/Data/TEMP/
 LHB_website.txt
