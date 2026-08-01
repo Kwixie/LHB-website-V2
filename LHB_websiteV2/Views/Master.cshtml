@@ -5,16 +5,18 @@
 
     var homePage = Umbraco.AssignedContentItem.AncestorOrSelf<StartPage>();
 
+    var pageTitle = Umbraco.AssignedContentItem != null && Umbraco.AssignedContentItem != homePage
+        ? $"{Umbraco.AssignedContentItem.Name} - LHB Förbundet"
+        : "LHB Förbundet";
 }
 
 <!DOCTYPE HTML>
 <html lang="sv">
 <head>
     @*     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d0182e9a-07a5-4ae2-a584-fe283c07e27d" data-blockingmode="auto" type="text/javascript"></script>  // SCRIPT for cookies from cookiebot. Will work with the right domain*@
-    <title>LHB förbundet</title>
+    <title>@pageTitle</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>LHB Förbundet</title>
     <link rel="icon" href="/images/favicon2.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
