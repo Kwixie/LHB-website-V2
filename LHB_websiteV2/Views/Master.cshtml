@@ -23,6 +23,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css" />
 
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Default: no analytics cookies until the visitor consents.
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
+        if (localStorage.getItem('lhb_cookie_consent') === 'accepted') {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-V69DG028MF');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V69DG028MF"></script>
 
 </head>
 
@@ -73,6 +91,17 @@
 
         </div>
     </footer>
+
+    <!-- Cookie consent banner -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner hidden">
+        <div class="cookie-consent-text">
+            Vi använder cookies för att med Google Analytics analysera hur besökare använder webbplatsen. Godkänner du det?
+        </div>
+        <div class="cookie-consent-buttons">
+            <button type="button" id="cookie-consent-accept" class="btn btn-light btn-sm">Acceptera</button>
+            <button type="button" id="cookie-consent-decline" class="btn btn-outline-light btn-sm">Neka</button>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

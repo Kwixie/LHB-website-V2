@@ -9,6 +9,7 @@ import rtestyles from "./css/rte.scss";
 import typostyles from "./css/typography.scss";
 import whoarewestyles from "./css/whoarewepage.scss";
 import animationstyles from "./css/animation.scss";
+import cookieconsentstyles from "./css/cookieconsent.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
   var arrow = document.querySelector(".arrow-down");
@@ -40,4 +41,33 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(parentDiv.id);
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var banner = document.getElementById("cookie-consent-banner");
+
+  if (banner === null) {
+    return;
+  }
+
+  if (localStorage.getItem("lhb_cookie_consent") === null) {
+    banner.classList.remove("hidden");
+  }
+
+  document
+    .getElementById("cookie-consent-accept")
+    .addEventListener("click", function () {
+      localStorage.setItem("lhb_cookie_consent", "accepted");
+      if (typeof gtag === "function") {
+        gtag("consent", "update", { analytics_storage: "granted" });
+      }
+      banner.classList.add("hidden");
+    });
+
+  document
+    .getElementById("cookie-consent-decline")
+    .addEventListener("click", function () {
+      localStorage.setItem("lhb_cookie_consent", "declined");
+      banner.classList.add("hidden");
+    });
 });
